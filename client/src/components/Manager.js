@@ -1,25 +1,28 @@
 import React from 'react'
-import {Button,Form} from 'react-bootstrap'
+
 
 function Manager() {
     return(
         <>
-        <div className="App">
-            <h1>Manager</h1>
-        </div>
-        <div style={{ display: 'block', 
-                  width: 700, 
-                  padding: 30 }}>
+        <div className="wrapper p-5">
+            <h1 className='text-center'>Manager</h1>
             <h4>Agent's Performance</h4>
-            <Form>
-                <Form.Group>
-                    <Form.Label>Sales Data:</Form.Label>
-                    <Form.Control type='text' />
-                </Form.Group>
-                <Button>Get Data</Button>
-                <Button>All Sales</Button>
-                <Button>All Agents</Button>
-            </Form>
+            <form>
+                <div className='form-group'>
+                    <label>Sales Data:</label>
+                    <input type='text' className='form-control' />
+                </div>
+                <div className='form-group'>
+                    <input type='submit' value='Get Data' className='btn btn-info' />
+                </div>
+                <div className='form-group'>
+                    <input type='submit' value='All Sales' className='btn btn-info' />
+                </div>
+                <div className='form-group'>
+                    <input type='submit' value='All Agents' className='btn btn-info' />
+                </div>
+                
+            </form>
         </div>
         </>
     )

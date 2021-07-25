@@ -1,6 +1,7 @@
 import React from 'react'
 import {
-    Nav,NavLink,Bars,NavMenu,NavBtn,NavBtnLink 
+    Nav,NavLink,Bars,NavMenu,
+    // NavBtn,NavBtnLink 
 } from './NavbarElements'
 
 
@@ -21,6 +22,12 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink to='/manager' activeStyle>
                     Manager
+                </NavLink>
+                <NavLink to='/seller' activeStyle>
+                    Seller
+                </NavLink>
+                <NavLink to='/buyer' activeStyle>
+                    Buyer
                 </NavLink>
             </NavMenu>
             {/* <NavBtn>

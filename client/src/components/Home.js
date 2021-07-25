@@ -1,22 +1,26 @@
 import React from 'react'
 import image from '../realEstate.jpeg'
+
 // import {createBrowserHistory as history} from 'history'
-import {Button} from 'react-bootstrap'
-// import propertyForm from './propertyForm'
+
+// import propertyForm from './PropertyForm'
 
 function Home(props) {
     return(
         <>
-        <div className="App">
-            <h1>Home page</h1>
-        </div>
-        <div>
-            <img src={image} alt='' />
-        </div>
-        <div>
-            <Button variant='btn btn-dark' onClick={()=> props.history.push('/propertyForm')}>Add new Property</Button>
-            <Button variant='btn btn-dark' onClick={()=> props.history.push('/Agent')}>Agent Login</Button>
-            <Button variant='btn btn-dark' onClick={()=> props.history.push('/Manager')}>Manager Login</Button>
+        <div className="container">
+            <h1 className='text-center'>Home page</h1>
+        
+            <div className='my-3'>
+                <img src={image} alt='' />
+            </div>
+            <div>
+                <button className='btn btn-dark m-2' onClick={()=> props.history.push('/propertyForm')}>Add new Property</button>
+                <button className='btn btn-dark m-2' onClick={()=> props.history.push('/agent')}>Agent Login</button>
+                <button className='btn btn-dark m-2' onClick={()=> props.history.push('/manager')}>Manager Login</button>
+            </div>
+            
+            
         </div>
         </>
     )
