@@ -1,15 +1,13 @@
 # Real Estate Management System
 
 ## Description
-* A DBMS portal for a real estate office.
-* Maintains and process data concerning properties in a city.
-* Keeps track of deals and maintains a strong relationship between agent, buyer and seller.
+* Centralized Property Data: Our platform serves as a centralized repository for property. Effortlessly manage and process information concerning properties.
+* Relationship Management: Strengthen relationships among agents, buyers, and sellers.
 
 ### Tech Stack Used
 
-* Frontend- `EJS`,`CSS`
-* Backend- `NodeJs`,`ExpressJs`
-* Database- `MySQL`
+* React
+* Tailwind CSS
 
 ### Steps to run the project
 * Run `npm install` to install dependencies to your system.
