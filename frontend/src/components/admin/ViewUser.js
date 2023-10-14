@@ -15,7 +15,7 @@ function ViewUser() {
     const [buyers, setbuyer] = useState([]);    // use state for setting buyer details
     const [sellers, setseller] = useState([]);  // use state for setting seller details
     const [agents, setagent] = useState([]);    // use state for setting agent details 
-    const [lodding, setlodding] = useState(true)    // checking content loading
+    const [isLoading, setLoading] = useState(true)    // checking content loading
 
 
     //function for  users deletion
@@ -98,7 +98,7 @@ function ViewUser() {
 
         output = await responce.json();
         setseller(output);
-        setlodding(false)       // updating state of setLodding
+        setLoading(false)       // updating state of setLoading
     }
 
     useEffect(() => {
@@ -110,8 +110,8 @@ function ViewUser() {
         <ALert/>
         <div className='row' style={{ overflowX: 'hidden' }}>
             <div className='col-md-4'>
-                {lodding && <Spinner />}
-                {!lodding && buyers.length == 0 ? <h2 style={{ margin: 'auto' }}>No Buyer</h2> : <div className='col-md-3 ' style={{}}><h2 style={{ margin: 'auto' }}>Buyer</h2>
+                {isLoading && <Spinner />}
+                {!isLoading && buyers.length == 0 ? <h2 style={{ margin: 'auto' }}>No Buyer</h2> : <div className='col-md-3 ' style={{}}><h2 style={{ margin: 'auto',fontWeight: 'bold',color: '#8c4848' }}>Buyer</h2>
                     <div className="d-flex flex-column">
                         {buyers.map((buyer, index) => {
                             return <UserItem key={buyer.id} id={buyer._id} users={buyer} index={index} userType={'buyer'} handleOnclick={handleOnclick} />
@@ -121,7 +121,7 @@ function ViewUser() {
             </div>
 
             <div className='col-md-4'>
-                {!lodding && sellers.length == 0 ? <h2 style={{ margin: 'auto' }}>No Seller</h2> : <div className='col-md-3 ' style={{}} ><h2 style={{ margin: 'auto' }} >Seller</h2>
+                {!isLoading && sellers.length == 0 ? <h2 style={{ margin: 'auto' }}>No Seller</h2> : <div className='col-md-3 ' style={{}} ><h2 style={{ margin: 'auto',fontWeight: 'bold',color: '#8c4848' }} >Seller</h2>
                     <div className="d-flex flex-column">
                         {sellers.map((seller, index) => {
                             return <UserItem key={seller.id} id={seller._id} users={seller} index={index} userType={'seller'} handleOnclick={handleOnclick} />
@@ -131,7 +131,7 @@ function ViewUser() {
             </div>
 
             <div className='col-md-4'>
-                {!lodding && agents.length == 0 ? <h2 style={{ margin: 'auto' }}>No Agent</h2> : <div className='col-md-3' style={{}}><h2 style={{ margin: 'auto' }}>Agent</h2>
+                {!isLoading && agents.length == 0 ? <h2 style={{ margin: 'auto' }}>No Agent</h2> : <div className='col-md-3' style={{}}><h2 style={{ margin: 'auto',fontWeight: 'bold',color: '#8c4848' }}>Agent</h2>
                     <div className="d-flex flex-column">
                         {agents.map((agent, index) => {
                             return <UserItem key={agent.id} id={agent._id} users={agent} index={index} userType={'agent'} handleOnclick={handleOnclick} />

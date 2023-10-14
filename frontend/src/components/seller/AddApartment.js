@@ -24,7 +24,7 @@ export default function UpdateProfile() {
         //this is to do not reload our page
         e.preventDefault();
         //convert area into lowercase
-        let areaNEW = addApartment.area.toLowerCase();
+        let areaNEW = addApartment.area;
         //API call to add the apartment in database
         const response = await fetch(`${host}/api/apartment/add`, {
             method: 'POST',
@@ -78,7 +78,7 @@ export default function UpdateProfile() {
                         <option value="Sale">Sale</option>
                     </select>
                     <div className="mb-3">
-                        <label htmlFor="name" className="form-label">Enter no of bedrooms</label>
+                        <label htmlFor="name" className="form-label">Enter no. of bedrooms</label>
                         <input type="text" pattern="^[1-9]+[0-9]*$" className="form-control" id="name" name='bedrooms' placeholder="e.g., 1" value={addApartment.bedrooms} onChange={onChange} required />
                     </div>
                     <div className="mb-3">

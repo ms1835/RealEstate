@@ -9,7 +9,7 @@ function ApartementView(props) {
    //it is for handle the state of  apartment
     const [apartements, setApartements] = useState([]);
     //state for loadding
-    const [lodding, setlodding] = useState(true)
+    const [isLoading, setLoading] = useState(true)
     //context api for alert message
     const context = useContext(AlertContext);
     // Destructuring alert and addAlert  from context api
@@ -26,7 +26,7 @@ function ApartementView(props) {
 
         const output = await responce.json();
         setApartements(output);
-        setlodding(false)
+        setLoading(false)
     }
 
     //delete apartment by taking the id of apartment which seller want to delete
@@ -70,8 +70,8 @@ function ApartementView(props) {
         <div>
             <Alert />
             <div className='container'>
-                {lodding && <Spinner />}
-                {!lodding && apartements.length === 0 ? <h2 style={{ marginTop: '20px', marginLeft: '10vw' }}>Currently No Property is listed</h2> : <div><div className='dashboard-top  bg-primary text-white'>Your Listed Apartment </div>
+                {isLoading && <Spinner />}
+                {!isLoading && apartements.length === 0 ? <h2 style={{ marginTop: '20px', marginLeft: '10vw' }}>No Property is Listed currently</h2> : <div><div className='dashboard-top text-white'>Your Listed Apartments </div>
                     <div className="d-flex flex-column">
                         {apartements.map((apartement, index) => {
                             return <ApartmentItem key={apartement._id} apartement={apartement} index={index} deleteApartment={deleteApartment} />

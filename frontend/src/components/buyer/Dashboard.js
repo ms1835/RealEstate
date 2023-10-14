@@ -57,10 +57,10 @@ export default function Dashboard() {
                                 <div className='profile-data'><span>Email Id: </span>{userDetails.email.toLowerCase()}</div>
                             </div>
                             <div className="update" >
-                                <div style={{display: 'flex',justifyContent: 'center'}}>
+                                <div >
                                     <NavLink to="/buyer/update-profile" state={{ userDetails }} ><button type="button" className="btn btn-primary update-btn">Update Profile</button></NavLink>
                                 </div>
-                                <div style={{display: 'flex',justifyContent: 'center'}}>
+                                <div >
                                     <NavLink to="/buyer/update-password" ><button type="button" className="btn btn-primary update-btn">Update Password</button></NavLink>
                                 </div>
 
