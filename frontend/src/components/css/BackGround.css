@@ -1,0 +1,15 @@
+.backGround{
+    background: #4b6953;
+    min-height: 100vh;
+    height: 100%;
+    width : 100vw;
+    padding-bottom: 16px;
+}
+
+.backGround2{
+    background: radial-gradient(#76b2fe, #b69efe);
+    min-height: 100vh;
+    height: 100%;
+    width : 100vw;
+}
+
