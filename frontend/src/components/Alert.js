@@ -11,16 +11,11 @@ function ALert() {
     // after 5 sec removing alert
     setTimeout(() => {
         addAlert(null);
-    }, 60000);
+    }, 10000);
 
-    // captilize the first letter of word
-    const capitalize = (word) => {
-        const lower = word;
-        return lower.charAt(0).toUpperCase() + lower.slice(1);
-    }
 
     return (
-        <div style={{ height: '50px' }}>
+        <div style={{ height: '50px',marginBottom: 8 }}>
             {alert && <div className={`alert alert-${alert.type} alert-dismissible fade show`} role="alert">
                 {alert.msg}
             </div>}

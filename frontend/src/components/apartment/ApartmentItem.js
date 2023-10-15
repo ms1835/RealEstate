@@ -14,8 +14,8 @@ function ApartmentItem(props) {
                 <h6 className="col-md-4  my-2 "> <span style={{color:'purple'}}>Area</span> - {apartement.area}</h6>
                 <h6 className="col-md-4  my-2 "><span style={{color:'purple'}}> Size</span> - {apartement.size}</h6>
                 <h6 className="col-md-4  my-2 "><span style={{color:'purple'}}>No. of bedrooms</span> - {apartement.bedrooms}</h6>
-                <h6 className="col-md-4  my-2 "><span style={{color:'purple'}}>Type</span>Type - {apartement.type}</h6>
-                <Link className="btn btn-primary col-md-4  my-2" to={'/property'} state={{ apartement: apartement, index: no }} role="button" aria-disabled="true">View Detail</Link >
+                <h6 className="col-md-4  my-2 "><span style={{color:'purple'}}>Type</span> - {apartement.type}</h6>
+                <Link className="btn btn-info col-md-4  my-2" to={'/property'} state={{ apartement: apartement, index: no }} role="button" aria-disabled="true">View Details</Link >
             </div>
         </div>
     )

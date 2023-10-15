@@ -86,7 +86,7 @@
   
   margin: auto;
   width: 30vw;
-  /* overflow-y: scroll; */
+  overflow-y: auto;
   height: 65vh;
 }
 

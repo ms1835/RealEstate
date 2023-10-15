@@ -3,6 +3,7 @@
     height: 100vh;
     background-image: url('./simple-icon.jpg');
     background-size: 205vh 85vh;
+    opacity: 80%;
   }
   
   .LOGO{

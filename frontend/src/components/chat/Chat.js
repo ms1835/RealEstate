@@ -12,7 +12,7 @@ function Chat() {
     const location = useLocation()
     const { sender, receiver } = location.state; //getting sender and receiver from button(link)
     // setting some variable
-    let senderId = sender.id, receiverId = receiver.id, receiverName = receiver.name, receiverType = receiver.type, senderType = sender.type, senderName = sender.name;
+    const senderId = sender.id, receiverId = receiver.id, receiverName = receiver.name, receiverType = receiver.type, senderType = sender.type, senderName = sender.name;
 
     // current message in inbut box
     const [currmessage, setcurrmessage] = useState("");
@@ -179,6 +179,11 @@ function Chat() {
         const json = await response.json();
     }
 
+    const capitalize = word => {
+        const lower = word;
+        return lower.charAt(0).toUpperCase() + lower.slice(1);
+    }
+
     // function when sender send the message
     const handleSubmit = async (e) => {
 
@@ -209,11 +214,11 @@ function Chat() {
             body: JSON.stringify({ from: senderId, to: receiverId, message: currmessage })
         });
 
-        let json = await response.json();
+        const json = await response.json();
         // if we succesully add the message
         if (json.success) {
             // getting the message in newArray
-            let newArray = message;
+            const newArray = message;
             // pushing the new  message 
             newArray.push({ fromSelf: true, message: currmessage, index: message.length });
 
@@ -228,22 +233,22 @@ function Chat() {
     return (
         <div className='mainDiv'> <nav>
            
-            <h1 className='H1'>Welcome to HomeBazzar Chat <span>
+            <h1 className='H1'>Welcome to HomeBazaar Chat <span>
                 <img className="LOGO" src={chatIcon} alt="" />
             </span></h1>
         </nav>
             <div className="Container" >
-                {message.map((msg) => {
-                    return (
-                        <div key={msg.index} className={`message ${msg.fromSelf === true ? "right" : "left"}`} ref={scrollRef}>{!msg.fromSelf ? receiverType : "you"} : {msg.message} </div>
+                {message.map( msg => 
+                     (
+                        <div key={msg.index} className={`message ${msg.fromSelf === true ? "right" : "left"}`} ref={scrollRef}>{!msg.fromSelf ? capitalize(receiverType) : "You"} : {msg.message} </div>
                     )
-                })}
+                )}
             </div>
 
             <div className="send">
                 <form id="send-container" onSubmit={handleSubmit}>
                     <input type="text" name="currmessage" value={currmessage} id="messageInp" onChange={onChange} defaultValue="" />
-                    <button className="button">Send</button>
+                    <button className="button mx-1">Send</button>
                 </form>
             </div>
 

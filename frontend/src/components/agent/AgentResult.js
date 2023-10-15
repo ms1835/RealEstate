@@ -42,7 +42,7 @@ function AgentResult() {
 
     // API call to get agents areawise
     const getAgent = async () => {
-        const responce = await fetch(`${host}/api/auth/agent/getAgent/${areaNEW}`, {
+        const responce = await fetch(`${host}/api/auth/agent/getAgent/${area}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

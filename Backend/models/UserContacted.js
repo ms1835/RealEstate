@@ -5,11 +5,11 @@ const UserConactedSchema = mongoose.Schema(
   {
     sender: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: true
     },
     receiver: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
+      required: true
     },
 
     users: Array,
@@ -28,10 +28,10 @@ const UserConactedSchema = mongoose.Schema(
     senderType: {
       type: String,
       required: true
-    },
+    }
   },
   {
-    timestamps: true,
+    timestamps: true
   }
 );
 
