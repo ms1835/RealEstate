@@ -4,6 +4,7 @@
   "description": "The purpose of developing this “Real Estate” application is to keep the sellers and buyers connected through a virtual platform and thus saving their time.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
