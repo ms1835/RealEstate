@@ -4,7 +4,7 @@ import { NavLink ,useNavigate} from 'react-router-dom';
 import Alert from '../Alert'
 import Footer from '../Footer';
 export default function Dashboard() {
-    const host = "http://localhost:5000";     // HOST address
+    const host = process.env.REACT_APP_SERVER_HOST_URL;     // HOST address
 
     const navigate = useNavigate() ; // for redirection
     //state for userDetails.

@@ -4,6 +4,8 @@ import '../css/UpdateProfile.css'
 import AlertContext from '../context/AlertContext'
 import "../css/BackGround.css"
 import ALert from '../Alert'
+
+
 const Login = () => {
 
     // using to accessed data without passing the props down manually to each level(component hierarch)
@@ -20,7 +22,7 @@ const Login = () => {
 
         //API call to login seller/buyer/agent/admin as per given credentials
         const response = await fetch(
-            `http://localhost:5000/api/auth/${userType}/login`,
+            `${process.env.REACT_APP_SERVER_HOST_URL}/api/auth/${userType}/login`,
             {
                 method: "POST",
                 headers: {

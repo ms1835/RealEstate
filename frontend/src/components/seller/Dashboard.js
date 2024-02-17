@@ -5,7 +5,7 @@ import Alert from '../Alert'
 import Receiver from '../chat/Receiver';
 
 export default function Dashboard() {
-    const host = "http://localhost:5000";
+    const host = process.env.REACT_APP_SERVER_HOST_URL;
 
     //useState hook to maintain the user state
     const [userDetails, setuserDetails] = useState({ name: "", email: "", id: "" })

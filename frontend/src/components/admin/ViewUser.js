@@ -4,7 +4,7 @@ import UserItem from './UserItem';
 import AlertContext from '../context/AlertContext'
 import ALert from '../Alert';
 
-const host = 'http://localhost:5000';
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 
 function ViewUser() {
@@ -23,7 +23,7 @@ function ViewUser() {
         
         //API call for deleting a user
         const response = await fetch(
-            `http://localhost:5000/api/auth/${userType}/delete/${id}`,
+            `${process.env.REACT_APP_SERVER_HOST_URL}/api/auth/${userType}/delete/${id}`,
             {
                 method: "DELETE",
                 headers: {

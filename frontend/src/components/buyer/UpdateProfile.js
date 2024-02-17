@@ -7,7 +7,7 @@ import AlertContext from '../context/AlertContext'
 
 export default function UpdateProfile() {
 
-    const host = "http://localhost:5000";     //HOST
+    const host = process.env.REACT_APP_SERVER_HOST_URL;     //HOST
 
     const location = useLocation()                     // Getting location of  page
     const { userDetails } = location.state              // desctructuring userDetails from location state

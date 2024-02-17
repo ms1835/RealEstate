@@ -15,7 +15,7 @@ export default function UpdateProfile() {
     const {  addAlert } = context;
     //to navigate 
     const navigate = useNavigate();
-    const host = "http://localhost:5000";
+    const host = process.env.REACT_APP_SERVER_HOST_URL;
     
     //function to update profile
     const handleUpdateProfile = async (e) => {

@@ -16,7 +16,7 @@ const Complaints = () => {
         e.preventDefault();
         const { email, title, description } = complaint;
         const response = await fetch(
-            'http://localhost:5000/api/complaint/create',
+            `${process.env.REACT_APP_SERVER_HOST_URL}/api/complaint/create`,
             {
                 method: "POST",
                 headers: {

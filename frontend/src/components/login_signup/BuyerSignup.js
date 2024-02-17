@@ -23,7 +23,7 @@ const SignUp = (props) => {
 
         // API call to store new buyer(with new details)
         const response = await fetch(
-            'http://localhost:5000/api/auth/buyer/signup',
+            `${process.env.REACT_APP_SERVER_HOST_URL}/api/auth/buyer/signup`,
             {
                 method: "POST",
                 headers: {

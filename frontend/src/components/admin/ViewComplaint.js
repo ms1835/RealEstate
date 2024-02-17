@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ComplaintItem from './ComplaintItem';
 import "../css/BackGround.css"
 import Spinner from '../Spinner'
-const host = 'http://localhost:5000';
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 function ViewComplaint() {
 

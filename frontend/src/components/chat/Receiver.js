@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ReceiverItem from './ReceiverItem';
-const host = "http://localhost:5000";
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 export default function Receiver(props) {
     //getting sender id from props
     const { id } = props

@@ -27,7 +27,7 @@ const AgentSignUp = () => {
 
         // API call for new agent registration/signup
         const response = await fetch(
-            'http://localhost:5000/api/auth/agent/signup',
+            `${process.env.REACT_APP_SERVER_HOST_URL}/api/auth/agent/signup`,
             {
                 method: "POST",
                 headers: {

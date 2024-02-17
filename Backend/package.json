@@ -13,7 +13,7 @@
     "reactjs",
     "mongoose"
   ],
-  "author": "Shivam Sahu Om prakash Mritunjay",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",

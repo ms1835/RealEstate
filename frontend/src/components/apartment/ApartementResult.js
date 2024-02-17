@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import ApartmentItem from './ApartmentItem';
 import "../css/Apartement.css"
 import Spinner from '../Spinner'
-const host = 'http://localhost:5000';
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 function ApartementResult() {
     const location = useLocation()     // Getting location of  page

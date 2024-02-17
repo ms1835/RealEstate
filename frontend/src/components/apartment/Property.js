@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import images from '../images'
 import { useLocation, useNavigate, NavLink } from "react-router-dom";
-const host = "http://localhost:5000";
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 function Property(props) {
 
     const navigate = useNavigate();    // for page redirection/navigation

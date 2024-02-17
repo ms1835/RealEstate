@@ -12,7 +12,7 @@ export default function UpdatePassword() {
     const { alert, addAlert } = context;
     //to navigate 
     const navigate = useNavigate();
-    const host = "http://localhost:5000";
+    const host = process.env.REACT_APP_SERVER_HOST_URL;
 
     //function to update user's password
     const handleUpdatePassword = async (e) => {

@@ -2,6 +2,7 @@ var express = require('express')  //Allows you to define routes of your applicat
 const connectToMongo = require('./database/db')
 const dotenv = require('dotenv').config()
 var cors = require('cors')
+const server = require("http").createServer();
 var app = express()
 const PORT = process.env.PORT
 
@@ -20,15 +21,15 @@ app.use('/api/auth/agent', require('./routes/authentication/agent'));
 app.use('/api/apartment/', require('./routes/apartment'));
 app.use('/api/complaint/', require('./routes/complaint'));
 app.use("/api/messages", require('./routes/message'));
-//our server listing at port number 5000
+
 app.listen(PORT, () => {
     console.log(`Server is runing at port ${PORT}`)
 })
 
 /* SOCKET.IO CODE ------------------------*/
-const io = require('socket.io')(4000, {
+const io = require('socket.io')(server, {
     cors: {
-        origin: "http://localhost:3000"
+        origin: process.env.FRONTEND_URI
     },
 })
 //store the user id and socket id of current users 

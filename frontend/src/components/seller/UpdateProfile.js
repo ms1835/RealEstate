@@ -6,7 +6,7 @@ import "../css/BackGround.css"
 import ALert from '../Alert'
 
 export default function UpdateProfile() {
-    const host = "http://localhost:5000";
+    const host = process.env.REACT_APP_SERVER_HOST_URL;
 
     //useLocation for getting userDetails through link
     const location = useLocation()

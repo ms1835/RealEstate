@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import AgentItem from './AgentItem';
 import Spinner from '../Spinner'
 
-const host = 'http://localhost:5000';
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 //Getting all the agents areawise 
 function AgentResult() {

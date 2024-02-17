@@ -3,7 +3,7 @@ import Spinner from '../Spinner'
 import ApartmentItem from './ApartmentItem';
 import AlertContext from '../context/AlertContext'
 import Alert from '../Alert';
-const host = 'http://localhost:5000';
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 function ApartementView(props) {
    //it is for handle the state of  apartment

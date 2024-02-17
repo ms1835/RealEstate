@@ -6,7 +6,7 @@ import Alert from '../Alert'
 import "../css/BackGround.css"
 
 export default function UpdatePassword() {
-    const host = "http://localhost:5000";
+    const host = process.env.REACT_APP_SERVER_HOST_URL;
 
     //it is for handle the state of updated Password
     const [updatePassword, setupdatePassword] = useState({ oldPassword: "", newPassword: "", cnewPassword: "" });

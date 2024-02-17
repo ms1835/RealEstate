@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import chatIcon from './yellow.jpg'
 import "./Chat.css"
 import { io } from 'socket.io-client'
-const host = "http://localhost:5000";
+const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 function Chat() {
 
@@ -73,7 +73,9 @@ function Chat() {
 
     useEffect(() => {
         //socket connection 
-        socket.current = io('ws://localhost:4000')
+        socket.current = io(process.env.REACT_APP_SERVER_HOST_URL, {
+            transports: ["websocket"]
+        })
         //getting message from receiver
         socket.current.on("getMessage", data => {
             let newMsg = { message: data.message, fromSelf: false }

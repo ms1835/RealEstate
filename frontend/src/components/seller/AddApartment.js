@@ -6,7 +6,7 @@ import "../css/BackGround.css"
 import AlertContext from '../context/AlertContext'
 
 export default function UpdateProfile() {
-    const host = "http://localhost:5000";
+    const host = process.env.REACT_APP_SERVER_HOST_URL;
 
     //it is for handle the state of Adding apartment
     const [addApartment, setaddApartment] = useState({ address: "", area: "", bedrooms: "", size: "", price: "" });
