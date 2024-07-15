@@ -61,25 +61,27 @@ const SignUp = (props) => {
         <div className='backGround'>
             <ALert />
 
-            <div className='update-container'  style={{ width: '40%' }}>
-            <h3 style={{ marginLeft: '30%', margintBottom: "50px" }}>SignUp Form</h3>
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-3" style={{ marginBottom: '30px' }}>
+            <div className='update-container'>
+            <h3 className='mb-32 text-center'>SignUp Form</h3>
+                <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
+                    <div className="mb-3" >
                         <label htmlFor="name" className="form-label">Name</label>
                         <input type="text" className="form-control" onChange={onChange} aria-describedby="emailHelp"
                             id="name" name="name" />
                     </div>
-                    <div className="mb-3" style={{ marginBottom: '30px' }}>
+                    <div className="mb-3" >
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                         <input type="email" className="form-control" onChange={onChange} aria-describedby="emailHelp"
                             id="email" name="email" />
                     </div>
-                    <div className="mb-3" style={{ marginBottom: '30px' }}>
+                    <div className="mb-3" >
                         <label htmlFor="password" className="form-label">Password</label>
                         <input type="password" className="form-control" onChange={onChange}
                             id="password" name="password" minLength={5} required />
                     </div>
-                    <button type="submit" className="btn btn-primary"  style={{ marginTop: '20px', marginLeft: '40%' }}>Submit</button>
+                    <div className='flex align-self-center'>
+                        <button type="submit" className="btn btn-success">Submit</button>
+                    </div>
                 </form>
 
             </div>

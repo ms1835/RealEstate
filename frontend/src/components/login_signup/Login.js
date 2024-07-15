@@ -62,28 +62,29 @@ const Login = () => {
         <div className='backGround'>
             <ALert />
 
-            <div className='update-container' style={{ width: '40%' }}>
-                <h3 style={{ marginLeft: '30%', margintBottom: "50px" }}>Login Form</h3>
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-3" style={{ marginBottom: '30px' }}>
+            <div className='update-container' >
+                <h3 className='mb-32 text-center'>Login Form</h3>
+                <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
+                    <div className="mb-3" >
                         <label htmlFor="email" className="form-label">Email address</label>
                         <input type="email" className="form-control" id="email" value={credentials.email} name="email" aria-describedby="emailHelp"
                             onChange={onChange} />
                     </div>
-                    <div className="mb-3" style={{ marginBottom: '30px' }}>
+                    <div className="mb-3">
                         <label htmlFor="password" className="form-label">Password</label>
                         <input type="password" id="password" value={credentials.password} name="password" className="form-control"
                             onChange={onChange} />
                     </div>
-                    <select className="mb-3 form-select" aria-label="Default select example" onChange={onChangeType} required>
-                        <option value="">Login as </option>
+                    <select className="mb-3 form-select form-select-md rounded custom-select" aria-label="Default select example" onChange={onChangeType} required>
+                        <option value="">Select Persona </option>
                         <option value="seller">Seller</option>
                         <option value="buyer">Buyer</option>
                         <option value="admin">Admin</option>
                         <option value="agent">Agent</option>
                     </select>
-
-                    <button type="submit" className="btn btn-primary" style={{ marginTop: '20px', marginLeft: '40%' }}>Submit</button>
+                    <div className='flex align-self-center'>
+                        <button type="submit" className="btn btn-success">Submit</button>
+                    </div>
                 </form>
 
             </div>

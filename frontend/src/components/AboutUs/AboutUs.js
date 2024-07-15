@@ -14,8 +14,8 @@ const AboutUs = () => {
                         <img src={teamIcon} alt="Team Icon" className='teamIconImg' />
                     </h1>
                     <br />
-                    <h2 className='heading2'> Our goal is to make online purchasing/selling/renting of properties in an easy and
-                        smooth manner along with security and best user experience</h2>
+                    <h2 className='heading2'> Our mission is to revolutionize the online real estate market by offering a seamless, secure, and 
+                        unparalleled user experience for buying, selling, and renting properties.</h2>
                 </div>
 
                 <div class="custom-row row">
@@ -62,7 +62,7 @@ const AboutUs = () => {
                                 <img src={team2img} alt="Team Image" className='team-img' />
                             </div>
                             <div class="team-content">
-                                <h2 className='heading2'>MRITUNJAY</h2>
+                                <h2 className='heading2'>MRITUNJAY KUMAR</h2>
                                 <h3 className='heading3'>Full Stack Developer</h3>
                                 <h4>mritunjay.kumar@iiitg.ac.in</h4>
                             </div>

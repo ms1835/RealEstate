@@ -48,8 +48,9 @@ const Complaints = () => {
     return (
         <div className=' backGround'>
             <ALert />
-            <div className='update-container' style={{ width: '40%' }}>
-                <form onSubmit={handleSubmit}>
+            <div className='update-container'>
+            <h3 className='mb-32 text-center'>Register Complain</h3>
+                <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
                     <div className=" mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                         <input type="email" className="form-control" onChange={onChange} aria-describedby="emailHelp"
@@ -65,7 +66,9 @@ const Complaints = () => {
                         <textarea type="text" className="form-control" rows={5} onChange={onChange} aria-describedby="emailHelp"
                             id="description" name="description" required minLength={10} />
                     </div>
-                    <button type="submit" className="btn btn-primary" style={{ marginTop: '20px', marginLeft: '40%' }} >Submit</button>
+                    <div className='flex align-self-center'>
+                        <button type="submit" className="btn btn-success" >Submit</button>
+                    </div>
                 </form>
             </div>
         </div>

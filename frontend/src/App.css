@@ -34,8 +34,8 @@ body{
 }
 
  .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-color: #8b8ab2;
-    border-radius: 40px;
+    background-color: #198754;
+    border-radius: 8px
 }
 
 @media (max-width: 1000px) { 
@@ -47,6 +47,6 @@ body{
         align-items: center;
     }
     .custom-card{
-        margin : 15px;
+        /* margin : 15px; */
     }
     }

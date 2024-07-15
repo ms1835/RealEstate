@@ -41,27 +41,27 @@ function Navbar() {
         // className="navbar fixed-position-navbar navbar-expand-lg navbar navbar-light" style={{backgroundColor: "rgba(40,57,101,.9)" , color:"white"}}
         <nav className={`navbar fixed-position-navbar navbar-expand-lg navbar navbar-dark bg-dark`}>
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/" style={{color : 'white'} }>
-                    <img src={logo} alt="" width="50" height="30" className="d-inline-block align-text-top" style={{marginRight:8}} />
+                <Link className="navbar-brand d-flex justify-content-center align-items-center" to="/" style={{color : 'white'} }>
+                    <img src={logo} alt="" width="40" height="40" className="d-inline-block align-text-top" style={{marginRight:8}} />
                     HomeBazaar
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" ></span>
                 </button>
                 <div className="collapse navbar-collapse navbar-inverse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0" >
+                    <ul className="navbar-nav me-auto my-2 mb-lg-0" >
                         <li className="nav-item">
-                            <Link className={`nav-link ${location.pathname === '/' ? 'active' : ""} navbarLink`} aria-current="page" to="/" style={{color : 'white'} }>Home</Link>
+                            <Link className={`nav-link text-center ${location.pathname === '/' ? 'active' : ""} navbarLink`} aria-current="page" to="/" style={{color : 'white'} }>Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ""} navbarLink`} aria-current="page" to="/about" style={{color : 'white'} }>
+                            <Link className={`nav-link text-center ${location.pathname === '/about' ? 'active' : ""} navbarLink`} aria-current="page" to="/about" style={{color : 'white'} }>
                                 About
                             </Link>
                         </li>
                     </ul>
-                    {!localStorage.getItem('token') ? <div className="d-flex">
+                    {!localStorage.getItem('token') ? <div className="d-flex gap-2">
                         <div className="dropdown">
-                            <Link className="btn btn-primary dropdown-toggle" to="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <Link className="btn btn-success dropdown-toggle" to="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 SignUp
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -70,10 +70,10 @@ function Navbar() {
                                 <li><Link className="dropdown-item" to={'/agentsignup'}>As a Agent</Link></li>
                             </ul>
                         </div>
-                        <Link className="btn btn-primary mx-1" to={'/login'} role="button" aria-disabled="true">Login</Link >
-                    </div> : <div className='d-flex'>
-                        <button className="btn btn-primary mx-3" style={{ paddingTop: "0px", paddingBottom: "0px" }} onClick={handleComplaintOnclick} role="button" aria-disabled="true">Complaint</button>
-                        <button className="btn btn-primary mx-3" style={{ paddingTop: "0px", paddingBottom: "0px" }} onClick={handleOnclick} role="button" aria-disabled="true">Logout</button>
+                        <Link className="btn btn-success mx-1" to={'/login'} role="button" aria-disabled="true">Login</Link >
+                    </div> : <div className='d-flex space-evenly'>
+                        <button className="btn btn-success mx-3"  onClick={handleComplaintOnclick} role="button" aria-disabled="true">Complaint</button>
+                        <button className="btn btn-success mx-3" onClick={handleOnclick} role="button" aria-disabled="true">Logout</button>
                         <button className="btn mx-3" onClick={handleOnclickUser} role="button" aria-disabled="true"><i className="fa-solid fa-circle-user navbarLink" style={{ fontSize: "25px" , backgroundColor: 'white' }}></i></button>
                     </div>}
                 </div>

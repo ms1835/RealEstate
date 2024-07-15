@@ -28,21 +28,21 @@ h6{
 }
 .aboutuscontainer{
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin: auto;
     /* background: rgb(2,0,36); */
 }
 .aboutus{
   min-height: 100vh;
-  background: #a68f74;
+  background: #95acb3;
   /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(3,153,216,1) 0%, rgba(0,212,255,1) 100%); */
 }
 .section-title{
-    flex: 0 0 100%;
+    padding: 60px 0 60px 0;
+    /* flex: 0 0 100%; */
     max-width: 100%;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
     /* margin-top: 40px; */
     text-align: center;
 }

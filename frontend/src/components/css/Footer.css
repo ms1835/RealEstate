@@ -12,14 +12,16 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #424140;
-    padding: 70px 0;
+	background-color: #2e280a;
+    padding: 20px 0;
     width: 100vw;
     overflow-x: hidden;
 }
 .footer-col{
+   justify-content: center;
+   justify-items: center;
    width: 33%;
-   padding: 0 15px;
+   padding: 0 4px;
 }
 .footer-col h4{
 	font-size: 18px;
