@@ -63,7 +63,7 @@ export default function UpdateProfile() {
             <Alert />
             <form onSubmit={handleAddApartment}>
                 <div className='update-container'>
-                    <div className='update-top bg-secondary text-white'>Add Apartment </div>
+                    <div className='update-top text-white mb-3 rounded' style={{background: "rgba(35, 66, 74)"}}>Add Apartment </div>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Enter address</label>
                         <input type="text" className="form-control" id="name" name='address' value={addApartment.address} onChange={onChange} required minLength={15} />
@@ -89,7 +89,9 @@ export default function UpdateProfile() {
                         <label htmlFor="name" className="form-label">Enter Price( ₹)</label>
                         <input type="text" pattern="^[1-9]+[0-9]*$" className="form-control" id="name" name='price' placeholder="e.g., 1500₹" value={addApartment.price} onChange={onChange} required />
                     </div>
-                    <button type="submit" className="btn btn-success" style={{ marginTop: '20px',marginLeft: '45%' }}>Add</button>
+                    <div className='d-flex justify-content-center'>
+                        <button type="submit" className="btn btn-success">Submit</button>
+                    </div>
                 </div>
             </form>
         </div>

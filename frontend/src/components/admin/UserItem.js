@@ -8,11 +8,13 @@ function UserItem(props) {
 
     return (
         <div className="card" style={{ width: "30vw", margin: "30px auto", backgroundColor: 'whitesmoke', borderRadius: '10px' }}>
-            <div className="card-body row">
-                <h6 className="col-md-12  my-2 ">{index + 1}</h6>
-                <h6 className="col-md-12  my-2 "><span style={{ color: 'rgb(135, 83, 24)' }}>Name -</span> {users.name}</h6>
-                <h6 className="col-md-12  my-2 "><span style={{ color: 'rgb(135, 83, 24)' }}>Email -</span> {users.email}</h6>
-                <button className="col-md-12 btn btn-danger mx-3 my-2" onClick={() => handleOnclick(id, userType)} role="button" aria-disabled="true" style={{ width: '50%' }}> Delete </button>
+            <div className="card-body row text-white rounded" style={{background: "radial-gradient(#47827e, #395f5e)"}}>
+                <h6 className="col-md-12  my-2 "><span >Name -</span> {users.name}</h6>
+                <h6 className="col-md-12  my-2 "><span >Email -</span> {users.email}</h6>
+                <div className='d-flex justify-content-center align-items-center'>
+                    <button className="col-md-6 btn mx-3 my-2 text-white" onClick={() => handleOnclick(id, userType)} role="button" aria-disabled="true" style={{background: "rgba(35, 66, 74)"}}> Delete </button>
+                </div>
+                
             </div>
         </div>
     )

@@ -63,10 +63,13 @@ export default function Receiver(props) {
     }, [])
 
     return (
-        <div>
-            {!loading ? <div>{receiver.map((rec) => {
-                return <ReceiverItem key={rec._id} receiver={rec} sender={sender} />
-            })}</div> : <div></div>}
-        </div>
+        <>
+            {
+                !loading ? 
+                    receiver.map((rec) => <ReceiverItem key={rec._id} receiver={rec} sender={sender} />)
+                : <></>
+            }
+        </>
+            
     )
 }

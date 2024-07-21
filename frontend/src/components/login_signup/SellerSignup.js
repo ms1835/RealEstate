@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../css/UpdateProfile.css'
 import "../css/BackGround.css"
 import AlertContext from '../context/AlertContext'
-import ALert from '../Alert';
+import Alert from '../Alert';
 
 //Seller SignUp 
 const SignUp = (props) => {
@@ -59,10 +59,10 @@ const SignUp = (props) => {
     }
     return (
         <div className='backGround'>
-            <ALert />
+            <Alert />
 
             <div className='update-container'>
-            <h3 className='mb-32 text-center'>SignUp Form</h3>
+            <h3 className='mb-32 text-center'>Welcome to HomeBazaar</h3>
                 <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
                     <div className="mb-3" >
                         <label htmlFor="name" className="form-label">Name</label>

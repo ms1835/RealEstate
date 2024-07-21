@@ -61,7 +61,7 @@ const SignUp = (props) => {
         <div className='backGround'>
             <Alert />
             <div className='update-container'>
-                <h3 className='mb-32 text-center'>SignUp Form</h3>
+                <h3 className='mb-32 text-center'>Welcome to HomeBazaar</h3>
                 <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
                     <div className="mb-3" >
                         <label htmlFor="name" className="form-label">Name</label>

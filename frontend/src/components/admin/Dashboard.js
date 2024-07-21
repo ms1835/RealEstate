@@ -51,27 +51,25 @@ export default function Dashboard() {
             <div style={{padding: 16}} className='dashboard-top text-white'>Dashboard </div>
             <Alert />
             <div className='dashboard'>
-                <div className="row">
-                    <div className="col">
-                        <div className='profile' style={{backgroundColor: '#53a39f'}}>
-                            <div className='profile-data'><span>Name: </span>{capitalize(userDetails.name.toLowerCase())}</div>
-                            <div className='profile-data'><span>Email Id: </span>{userDetails.email.toLowerCase()}</div>
+                <div className="d-flex flex-column align-items-center border border-2 p-4 border-secondary">
+                    <div className='profile ' >
+                        <div className='profile-data'><span>Name: </span>{capitalize(userDetails.name.toLowerCase())}</div>
+                        <div className='profile-data'><span>Email Id: </span>{userDetails.email.toLowerCase()}</div>
+                    </div>
+                    <div className="update">
+                        <div style={{display: 'flex',justifyContent: 'center'}}>
+                            <NavLink to="/admin/update-profile" state={{ userDetails }} className="" ><button type="button" className="btn btn-primary update-btn">Update Profile</button></NavLink>
                         </div>
-                        <div className="update">
-                            <div style={{display: 'flex',justifyContent: 'center'}}>
-                                <NavLink to="/admin/update-profile" state={{ userDetails }} className="" ><button type="button" className="btn btn-primary update-btn">Update Profile</button></NavLink>
-                            </div>
-                            <div style={{display: 'flex',justifyContent: 'center'}}>
-                                <NavLink to="/admin/update-password" className="" ><button type="button" className="btn btn-primary update-btn">Update Password</button></NavLink>
-                            </div>
-                            <div style={{display: 'flex',justifyContent: 'center'}}>
-                                <NavLink to="/admin/view-complaints" className="" ><button type="button" className="btn btn-primary update-btn">View Complaints</button></NavLink>
-                            </div>
-                            <div style={{display: 'flex',justifyContent: 'center'}}>
-                                <NavLink to="/admin/manage-users" className="" ><button type="button" className="btn btn-primary update-btn">Manage users</button></NavLink>
-                            </div>
+                        <div style={{display: 'flex',justifyContent: 'center'}}>
+                            <NavLink to="/admin/update-password" className="" ><button type="button" className="btn btn-primary update-btn">Update Password</button></NavLink>
+                        </div>
+                        <div style={{display: 'flex',justifyContent: 'center'}}>
+                            <NavLink to="/admin/view-complaints" className="" ><button type="button" className="btn btn-primary update-btn">View Complaints</button></NavLink>
+                        </div>
+                        <div style={{display: 'flex',justifyContent: 'center'}}>
+                            <NavLink to="/admin/manage-users" className="" ><button type="button" className="btn btn-primary update-btn">Manage users</button></NavLink>
+                        </div>
 
-                        </div>
                     </div>
                 </div>
             </div>

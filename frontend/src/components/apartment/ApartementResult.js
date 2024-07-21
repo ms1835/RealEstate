@@ -36,14 +36,14 @@ function ApartementResult() {
             {isLoading && <Spinner />}
             {
                 !isLoading && apartements.length == 0 ? 
-                    <h2 style={{ marginTop: '0px', marginLeft: '10vw' , color : 'whitesmoke', paddingTop: 8}}>Currently No Property is found in {area}</h2> : <div><h2 style={{ margin: '0px 34vw' , color : 'whitesmoke'}}>Property in {area}</h2>
-                    <div className="d-flex flex-column">
+                    <h2 className='text-white p-3'>Sorry, Currently no property is found in {area}</h2> : <><h2 className='text-white p-3'>Properties in {area}</h2>
+                    <div className="d-flex flex-column justify-content-center align-items-center">
                         {
                             apartements.map((apartement, index) => 
                                 <ApartmentItem key={apartement._id} apartement={apartement} index={index} />
                         )}
                     </div>
-                </div>
+                </>
             }
         </div>
     )

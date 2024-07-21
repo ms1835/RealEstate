@@ -67,19 +67,17 @@ function ApartementView(props) {
         getApartment();
     }, [])
     return (
-        <div>
-            <Alert />
-            <div className='container'>
+            <div className='container-fluid'>
                 {isLoading && <Spinner />}
-                {!isLoading && apartements.length === 0 ? <h2 style={{ marginTop: '20px', marginLeft: '10vw' }}>No Property is Listed currently</h2> : <div><div className='dashboard-top text-white'>Your Listed Apartments </div>
-                    <div className="d-flex flex-column">
+                {!isLoading && apartements.length === 0 ? <h2 className='font-weight-bold'>There is currently no property listed.</h2> : <div><div className='dashboard-top text-white'>Your Listed Apartments </div>
+                    <Alert />
+                    <div className="d-flex flex-column justify-content-center align-items-center">
                         {apartements.map((apartement, index) => {
                             return <ApartmentItem key={apartement._id} apartement={apartement} index={index} deleteApartment={deleteApartment} />
                         })}
                     </div>
                 </div>}
             </div>
-        </div>
     )
 }
 

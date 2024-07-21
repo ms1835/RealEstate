@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import AlertContext from '../context/AlertContext'
-import ALert from '../Alert';
+import Alert from '../Alert';
 import "../css/BackGround.css"
 
 export default function UpdatePassword() {
@@ -63,10 +63,10 @@ export default function UpdatePassword() {
 
     return (
         <div className='backGround'>
-            <ALert />
+            <Alert />
             <form onSubmit={handleUpdatePassword}>
                 <div className='update-container'>
-                    <div className='update-top bg-primary text-white'>Update Your Password </div>
+                    <div className='update-top text-white mb-5 rounded' style={{background: "rgba(35, 66, 74)"}}>Update Your Password </div>
                     <div className="mb-3">
                         <label htmlFor="oldPassword" className="form-label">Enter old password</label>
                         <input type="password" className="form-control" id="oldPassword" value={updatePassword.oldPassword} name='oldPassword' placeholder="password" onChange={onChange} required minLength={5} />
@@ -76,10 +76,12 @@ export default function UpdatePassword() {
                         <input type="password" className="form-control" id="newPassword" value={updatePassword.newPassword} name='newPassword' placeholder="new password" onChange={onChange} required minLength={5} />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="cnewPassword" className="form-label">Enter new password (again)</label>
+                        <label htmlFor="cnewPassword" className="form-label">Confirm new password</label>
                         <input type="password" className="form-control" id="cnewPassword" value={updatePassword.cnewPassword} name='cnewPassword' placeholder="confirm new password" onChange={onChange} required minLength={5} />
                     </div>
-                    <button type="submit" className="btn btn-success" style={{ marginTop: '20px', marginLeft: '40%' }}>Update</button>
+                    <div className='d-flex justify-content-center'>
+                        <button type="submit" className="btn btn-success" >Submit</button>
+                    </div>
                 </div>
             </form>
         </div>

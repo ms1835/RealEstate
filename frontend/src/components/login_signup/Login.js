@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import '../css/UpdateProfile.css'
 import AlertContext from '../context/AlertContext'
 import "../css/BackGround.css"
-import ALert from '../Alert'
+import Alert from '../Alert'
 
 
 const Login = () => {
@@ -60,10 +60,10 @@ const Login = () => {
 
     return (
         <div className='backGround'>
-            <ALert />
+            <Alert />
 
             <div className='update-container' >
-                <h3 className='mb-32 text-center'>Login Form</h3>
+                <h3 className='mb-32 text-center'>LOGIN</h3>
                 <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
                     <div className="mb-3" >
                         <label htmlFor="email" className="form-label">Email address</label>

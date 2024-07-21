@@ -1,12 +1,13 @@
 import React from 'react'
-import spinner from '../img/Spinner.gif'
 
 // Spinner when component is  loading
 const Spinner = () => {
 
     return (
-        <div className='container text-center my-3'>
-            <img src={spinner} alt={spinner} />
+        <div className='container d-flex justify-content-center align-items-center'>
+            <div className="spinner-grow" style={{"width": 200, "height": 200}} role="status">
+                <span className="sr-only">Loading...</span>
+            </div>
         </div>
     )
 }

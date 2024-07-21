@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import Spinner from '../Spinner'
 import UserItem from './UserItem';
 import AlertContext from '../context/AlertContext'
-import ALert from '../Alert';
+import Alert from '../Alert';
 
 const host = process.env.REACT_APP_SERVER_HOST_URL;
 
@@ -107,37 +107,37 @@ function ViewUser() {
 
     return (
         <>
-        <ALert/>
-        <div className='row' style={{ overflowX: 'hidden' }}>
-            <div className='col-md-4'>
+        <Alert/>
+        <div className='row m-2' style={{ overflowX: 'hidden' }}>
+            <div className='col-md-4 border border-1 rounded border-info p-2'>
                 {isLoading && <Spinner />}
-                {!isLoading && buyers.length == 0 ? <h2 style={{ margin: 'auto' }}>No Buyer</h2> : <div className='col-md-3 ' style={{}}><h2 style={{ margin: 'auto',fontWeight: 'bold',color: '#8c4848' }}>Buyer</h2>
-                    <div className="d-flex flex-column">
+                {!isLoading && buyers.length == 0 ? <h2 style={{ margin: 'auto',fontWeight: 'bold',color: "rgb(99, 58, 14)" }}>No Buyer</h2> : <><h2 style={{ margin: 'auto',fontWeight: 'bold',color: "rgb(99, 58, 14)" }}>Buyer</h2>
+                    <div className="d-flex flex-column justify-content-center align-items-center">
                         {buyers.map((buyer, index) => {
                             return <UserItem key={buyer.id} id={buyer._id} users={buyer} index={index} userType={'buyer'} handleOnclick={handleOnclick} />
                         })}
                     </div>
-                </div>}
+                </>}
             </div>
 
-            <div className='col-md-4'>
-                {!isLoading && sellers.length == 0 ? <h2 style={{ margin: 'auto' }}>No Seller</h2> : <div className='col-md-3 ' style={{}} ><h2 style={{ margin: 'auto',fontWeight: 'bold',color: '#8c4848' }} >Seller</h2>
-                    <div className="d-flex flex-column">
+            <div className='col-md-4 border border-1 rounded border-info p-2'>
+                {!isLoading && sellers.length == 0 ? <h2 style={{ margin: 'auto',fontWeight: 'bold',color: "rgb(99, 58, 14)" }}>No Seller</h2> : <><h2 style={{ margin: 'auto',fontWeight: 'bold',color: "rgb(99, 58, 14)" }} >Seller</h2>
+                    <div className="d-flex flex-column justify-content-center align-items-center">
                         {sellers.map((seller, index) => {
                             return <UserItem key={seller.id} id={seller._id} users={seller} index={index} userType={'seller'} handleOnclick={handleOnclick} />
                         })}
                     </div>
-                </div>}
+                </>}
             </div>
 
-            <div className='col-md-4'>
-                {!isLoading && agents.length == 0 ? <h2 style={{ margin: 'auto' }}>No Agent</h2> : <div className='col-md-3' style={{}}><h2 style={{ margin: 'auto',fontWeight: 'bold',color: '#8c4848' }}>Agent</h2>
-                    <div className="d-flex flex-column">
+            <div className='col-md-4 border border-1 rounded border-info p-2'>
+                {!isLoading && agents.length == 0 ? <h2 style={{ margin: 'auto',fontWeight: 'bold',color: "rgb(99, 58, 14)" }}>No Agent</h2> : <><h2 style={{ margin: 'auto',fontWeight: 'bold',color: "rgb(99, 58, 14)" }}>Agent</h2>
+                    <div className="d-flex flex-column justify-content-center align-items-center">
                         {agents.map((agent, index) => {
                             return <UserItem key={agent.id} id={agent._id} users={agent} index={index} userType={'agent'} handleOnclick={handleOnclick} />
                         })}
                     </div>
-                </div>}
+                </>}
             </div>
         </div>
         </>

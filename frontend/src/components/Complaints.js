@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
 import "./css/BackGround.css"
-import ALert from './Alert'
+import Alert from './Alert'
 import AlertContext from './context/AlertContext'
 
 const Complaints = () => {
@@ -47,10 +47,10 @@ const Complaints = () => {
     }
     return (
         <div className=' backGround'>
-            <ALert />
+            <Alert />
             <div className='update-container'>
-            <h3 className='mb-32 text-center'>Register Complain</h3>
-                <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
+            <h3 className='mb-32 text-center'>Register Your Complain</h3>
+                <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32 my-4'>
                     <div className=" mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
                         <input type="email" className="form-control" onChange={onChange} aria-describedby="emailHelp"

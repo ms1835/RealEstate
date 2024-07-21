@@ -65,16 +65,16 @@ function Navbar() {
                                 SignUp
                             </Link>
                             <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                <li><Link className="dropdown-item" to={'/buyersignup'}>As a Buyer</Link></li>
-                                <li><Link className="dropdown-item" to={'/sellersignup'}>As a Seller</Link></li>
-                                <li><Link className="dropdown-item" to={'/agentsignup'}>As a Agent</Link></li>
+                                <li><Link className="dropdown-item" to={'/buyersignup'}>Buyer</Link></li>
+                                <li><Link className="dropdown-item" to={'/sellersignup'}>Seller</Link></li>
+                                <li><Link className="dropdown-item" to={'/agentsignup'}>Agent</Link></li>
                             </ul>
                         </div>
                         <Link className="btn btn-success mx-1" to={'/login'} role="button" aria-disabled="true">Login</Link >
                     </div> : <div className='d-flex space-evenly'>
-                        <button className="btn btn-success mx-3"  onClick={handleComplaintOnclick} role="button" aria-disabled="true">Complaint</button>
-                        <button className="btn btn-success mx-3" onClick={handleOnclick} role="button" aria-disabled="true">Logout</button>
-                        <button className="btn mx-3" onClick={handleOnclickUser} role="button" aria-disabled="true"><i className="fa-solid fa-circle-user navbarLink" style={{ fontSize: "25px" , backgroundColor: 'white' }}></i></button>
+                        <button className="btn btn-success mx-2"  onClick={handleComplaintOnclick} role="button" aria-disabled="true">Complaint</button>
+                        <button className="btn btn-success mx-1" onClick={handleOnclick} role="button" aria-disabled="true">Logout</button>
+                        <button className="btn mx-2 outline-none border-0" onClick={handleOnclickUser} role="button" aria-disabled="true"><i className="fa-solid fa-circle-user navbarLink" style={{ fontSize: "25px" , backgroundColor: 'white' }}></i></button>
                     </div>}
                 </div>
             </div>

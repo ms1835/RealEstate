@@ -67,14 +67,14 @@ function AgentResult() {
     return (
         <div className='ApartementBackground'>
             {loading && <Spinner />}
-            {!loading && agents.length == 0 ? <h2 style={{marginLeft: '10vw', paddingTop: 8 }}>Currently No Agent is found in {area}</h2> : <div><h2 style={{ margin: '0px 34vw', padding:'10px'}}>Agents in {area}</h2>
-                <div className="d-flex flex-column">
+            {!loading && agents.length == 0 ? <h2 className='text-white p-3'>Sorry, Currently we do not have any agent in {area}</h2> : <><h2 className='text-white p-3'>Agents in {area}</h2>
+                <div className="d-flex flex-column justify-content-center align-items-center">
                     {agents.map((agent) => {
                         let receiver = { id: agent._id, name: agent.name, type: "agent" }
                         return <AgentItem key={agent._id} agent={agent} sender={sender} receiver={receiver} />
                     })}
                 </div>
-            </div>}
+            </>}
         </div>
     )
 }

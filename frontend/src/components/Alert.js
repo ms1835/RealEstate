@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import AlertContext from './context/AlertContext'
 
 // && is same as c++ && if first is false do not check second
-function ALert() {
+function Alert() {
 
     // using to accessed data without passing the props down manually to each level(component hierarch)
     const context = useContext(AlertContext);
@@ -11,7 +11,7 @@ function ALert() {
     // after 5 sec removing alert
     setTimeout(() => {
         addAlert(null);
-    }, 10000);
+    }, 20000);
 
 
     return (
@@ -23,4 +23,4 @@ function ALert() {
     )
 }
 
-export default ALert
+export default Alert

@@ -31,15 +31,15 @@ function ViewComplaint() {
 
     return (
         <div className='backGround2'>
-        <div className='container '>
+        <div className='container-fluid '>
             {lodding && <Spinner />}
-            {!lodding && complaints.length == 0 ? <h2 style={{  marginLeft: '10vw' }}>No Complaints</h2> : <div><h2 style={{ margin: '0px 34vw' }}>Complaints</h2>
-                <div className="d-flex flex-column">
+            {!lodding && complaints.length == 0 ? <h2 className='text-white p-3'>No complaints registered yet.</h2> : <><h2 className='text-white p-3'>Registered Complaints</h2>
+                <div className="d-flex flex-column justify-content-center align-items-center">
                     {complaints.map((complaint ,index) => {
                         return <ComplaintItem key={complaint._id} complaint={complaint} index={index} />
                     })}
                 </div>
-            </div>}
+            </>}
         </div>
         </div>
     )

@@ -3,7 +3,7 @@ import '../css/Dashboard.css'
 import { useNavigate, useLocation } from 'react-router-dom';
 import AlertContext from '../context/AlertContext'
 import "../css/BackGround.css"
-import ALert from '../Alert'
+import Alert from '../Alert'
 
 export default function UpdateProfile() {
     const host = process.env.REACT_APP_SERVER_HOST_URL;
@@ -54,15 +54,17 @@ export default function UpdateProfile() {
 
     return (
         <div className='backGround'>
-            <ALert />
+            <Alert />
             <form onSubmit={handleUpdateProfile}>
                 <div className='update-container'>
-                    <div className='update-top bg-primary text-white'>Update Your Details </div>
+                    <div className='update-top text-white mb-5 rounded' style={{background: "rgba(35, 66, 74)"}}>Update Profile </div>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Enter Name</label>
                         <input type="text" className="form-control" id="name" name='name' value={updateProfile.name} onChange={onChange} placeholder="Shivam sahu" required minLength={3} />
                     </div>
-                    <button type="submit" className="btn btn-success" style={{ marginTop: '20px', marginLeft: '40%' }}>Update</button>
+                    <div className='d-flex justify-content-center'>
+                        <button type="submit" className="btn btn-success" >Submit</button>
+                    </div>
                 </div>
             </form>
         </div>

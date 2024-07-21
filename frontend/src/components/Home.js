@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './css/Home.css';
 import buyImg from '../img/buy.jpg'
 import rent from '../img/rent.jpg'
-import ALert from './Alert';
+import Alert from './Alert';
 
 // Home Page of application
 function Home() {
@@ -28,7 +28,7 @@ function Home() {
 
     return (
         <div id="cont">
-            <ALert />
+            <Alert />
             <form className="d-flex responsive-home gap-2" id='searchSection'>
                 {/* <select className="mb-2 form-select" aria-label="Default select example" onChange={setSearchingType} style={{ width: "100px" }} required>
                     <option value="">Select</option>

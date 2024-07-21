@@ -82,7 +82,7 @@ function Property(props) {
                 </div>
 
                 {!loading ? <div className="col" id='chat'>
-                    <NavLink to="/chat" state={{ sender, receiver }}   ><button type="button" className="btn btn-primary  btn-circle" style={{ borderRadius: "400px", marginTop: '50px' }} >Chat Seller</button></NavLink>
+                    <NavLink to="/chat" state={{ sender, receiver }}   ><button type="button" className="btn btn-round text-white" style={{background: "rgba(35, 66, 74)"}} >Chat with Seller</button></NavLink>
                 </div> : <div></div>}
             </div>
         </div >

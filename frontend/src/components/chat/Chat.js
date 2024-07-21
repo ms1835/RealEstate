@@ -233,25 +233,21 @@ function Chat() {
 
     }
     return (
-        <div className='mainDiv'> <nav>
-           
-            <h1 className='H1'>Welcome to HomeBazaar Chat <span>
-                <img className="LOGO" src={chatIcon} alt="" />
-            </span></h1>
-        </nav>
-            <div className="Container" >
-                {message.map( msg => 
-                     (
-                        <div key={msg.index} className={`message ${msg.fromSelf === true ? "right" : "left"}`} ref={scrollRef}>{!msg.fromSelf ? capitalize(receiverType) : "You"} : {msg.message} </div>
-                    )
-                )}
+        <div className='mainDiv p-4'>
+            <h1 className='heading mb-3'>
+                Welcome to HomeBazaar Chat 
+                <span>
+                    <img className="LOGO" src={chatIcon} alt="" />
+                </span>
+            </h1>
+            <div className="Container mb-3" >
+                {
+                    message.map( msg => <div key={msg.index} className={`message ${msg.fromSelf === true ? "right" : "left"}`} ref={scrollRef}>{!msg.fromSelf ? capitalize(receiverType) : "You"} : {msg.message} </div>)
+                }
             </div>
-
-            <div className="send">
-                <form id="send-container" onSubmit={handleSubmit}>
-                    <input type="text" name="currmessage" value={currmessage} id="messageInp" onChange={onChange} defaultValue="" />
-                    <button className="button mx-1">Send</button>
-                </form>
+            <div className='d-flex justify-content-center w-100'>
+                <input type="text" name="currmessage" value={currmessage} id="" onChange={onChange} defaultValue="" className='w-50'/>
+                <button className="btn btn-success mx-1" onClick={handleSubmit}>Send</button>
             </div>
 
         </div>

@@ -46,35 +46,30 @@ export default function Dashboard() {
     }
     return (
         <div style={{ minHeight: "100vh" }} id='background-image'>
-            {!loading ? <div>
-                <div className='dashboard'>
+            {
+                !loading ? <>
                     <div className='dashboard-top text-white'>Dashboard </div>
                     <Alert />
-                    <div className="dash">
-                        <div className="dashboard-left">
+                    <div className='dashboard d-flex'>
+                        <div className="dashboard-left d-flex flex-column align-items-center">
                             <div className='profile'>
                                 <div className='profile-data'><span>Name: </span>{capitalize(userDetails.name.toLowerCase())}</div>
                                 <div className='profile-data'><span>Email Id: </span>{userDetails.email.toLowerCase()}</div>
                             </div>
                             <div className="update" >
-                                <div >
-                                    <NavLink to="/buyer/update-profile" state={{ userDetails }} ><button type="button" className="btn btn-primary update-btn">Update Profile</button></NavLink>
-                                </div>
-                                <div >
-                                    <NavLink to="/buyer/update-password" ><button type="button" className="btn btn-primary update-btn">Update Password</button></NavLink>
-                                </div>
-
+                                <NavLink to="/buyer/update-profile" state={{ userDetails }} ><button type="button" className="btn btn-primary update-btn">Update Profile</button></NavLink>
+                                <NavLink to="/buyer/update-password" ><button type="button" className="btn btn-primary update-btn">Update Password</button></NavLink>
                             </div>
                         </div>
-                        <div className="dashboard-right" id=''>
-                            <h2 style={{ textAlign: 'center', color: 'white', background: 'rgb(180 22 183 / 47%)' }}>Your chat history</h2>
+                        <div className="dashboard-right border border-2 border-secondary">
+                            <h2 className='text-white text-center' style={{background:'rgba(84, 77, 27,0.7'}}>Chat History</h2>
                             <div className='chat-section' >
                                 <Receiver id={userDetails.id} />
                             </div>
                         </div>
                     </div>
-                </div>
-            </div> : <div></div>}
+                </> : <></>
+            }
         </div>
 
     )
