@@ -70,34 +70,31 @@ Three types of users will be using this application(AGENT, BUYER, SELLER, and AD
 ### External Interface Requirements
 ### User Interfaces
    - **Home Page**
- ![HomePage](https://github.com/ms1835/RealEstate/assets/54627924/b13f5a3b-f510-4497-89c0-c4ad79c30b62)
-
+![HomePage](https://github.com/user-attachments/assets/234e2bca-03b3-445d-b62a-0b3b6b340f3a)
 
    - **Login**
-![LoginPage](https://github.com/ms1835/RealEstate/assets/54627924/a18ef822-4360-4d37-a36a-ab6e18d05e6b)
-
+![LoginPage](https://github.com/user-attachments/assets/10c4d456-d6ab-4e56-94e7-5b4919e9d722)
 
    - **Signup**
-![SignUp](https://github.com/ms1835/RealEstate/assets/54627924/b7a683b6-c432-4565-af54-b4aa3d5657b7)
+![SignUp](https://github.com/user-attachments/assets/93cb0ddb-9d96-46ad-b7bc-4531c72ebf62)
 
    - **DashBoard**
-![Dashboard](https://github.com/ms1835/RealEstate/assets/54627924/fc6495a1-b15b-4104-ab20-ea3b8591a717)
+![Dashboard](https://github.com/user-attachments/assets/87ceaa0f-fa94-434e-aa89-34956557b8e6)
 
-  - **Chatting**
-![Chat](https://github.com/ms1835/RealEstate/assets/54627924/6c6b5755-ace1-47c5-a3c1-ee306301cafa)
+  - **Chat Section**
+![Chat](https://github.com/user-attachments/assets/252be747-6e20-46e0-a117-303e6ea13eb9)
 
-  - **View Listed Apartment**
-![ListedApartment](https://github.com/ms1835/RealEstate/assets/54627924/0e7da151-ec51-4859-b560-4bed8c1febbf)
+  - **View Listed Apartments**
+![ListedApartments](https://github.com/user-attachments/assets/29dff064-502e-4e7f-a2dc-d2f982aac1be)
 
-  - **Users (Manage by admin)**
-![ManageUsers](https://github.com/ms1835/RealEstate/assets/54627924/83a6dcd4-5ac5-47f2-8ac9-0f6768c7b4f5)
+  - **Users (Managed by Admin)**
+![ManageUsers](https://github.com/user-attachments/assets/7edbed54-9d30-47e6-86c6-e30f0bb15261)
 
- - **Complains (Visible to admin)**
-![Complaint](https://github.com/ms1835/RealEstate/assets/54627924/e0a8f73a-0199-45c8-af04-78255cf7bf81)
+ - **Complains (Admin Specific)**
+![Complains](https://github.com/user-attachments/assets/2f25abe5-94fb-407e-a710-655dca5f71c2)
 
- 
-**About us**
-![Team](https://github.com/ms1835/RealEstate/assets/54627924/ea067a1c-bef5-4e83-a0fa-6c5db1ec5ad0)
+**About Us**
+![Team](https://github.com/user-attachments/assets/86e34867-15c5-44c1-bd50-c05900720830)
 
 ### Software Tools
 - **Database Server**- MongoDB 
