@@ -65,7 +65,7 @@ function Property(props) {
     return (
         <div style={{ backgroundColor: 'whitesmoke', width: '100%', overflow: 'hidden' }} >
             <div id="img" style={{ width: '70vh', marginTop: '20px', height: '70vh', marginLeft: '15vw' }}>
-                <img src={images[index]} style={{ maxHeight: '70vh' }} />
+                <img src={images[index]} style={{ maxHeight: '70vh' }} loading='lazy' />
             </div>
             <div className="row" style={{ marginTop: '50px', marginBottom: '20px', backgroundColor: 'whitesmoke' }} id="detail">
                 <div className="col" id="overview" style={{ marginLeft: '15vw' }}>

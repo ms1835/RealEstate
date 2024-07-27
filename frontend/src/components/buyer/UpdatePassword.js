@@ -26,7 +26,7 @@ export default function UpdatePassword() {
         if (updatePassword.cnewPassword !== updatePassword.newPassword) {
             addAlert({
                 type: 'danger',
-                msg: 'New password and Confirm password must be same'
+                msg: 'Password and confirm password should be same'
             })
             return;
         }
@@ -46,7 +46,7 @@ export default function UpdatePassword() {
         if (json.success) {
             addAlert({
                 type: 'success',
-                msg: 'Password Updated Successfully'
+                msg: 'Password updated successfully'
             })
             navigate('/buyer/dashboard')
         }

@@ -38,7 +38,7 @@ const Login = () => {
             localStorage.setItem('userType', userType)
             addAlert({
                 type: 'success',
-                msg: 'Login Successfully'
+                msg: 'Login successful'
             })
 
             navigate('/')
@@ -46,7 +46,7 @@ const Login = () => {
         else {   // Wrong Credentials used
             addAlert({
                 type: 'danger',
-                msg: 'Invalid credential'
+                msg: 'Invalid Credentials!'
             })
         }
     }
@@ -62,9 +62,9 @@ const Login = () => {
         <div className='backGround'>
             <Alert />
 
-            <div className='update-container' >
-                <h3 className='mb-32 text-center'>LOGIN</h3>
+            <div className='update-container'>
                 <form onSubmit={handleSubmit} className='d-flex flex-column justify-content-center gap-32'>
+                    <h3 className='mb-32 text-center'>LOGIN</h3>
                     <div className="mb-3" >
                         <label htmlFor="email" className="form-label">Email address</label>
                         <input type="email" className="form-control" id="email" value={credentials.email} name="email" aria-describedby="emailHelp"

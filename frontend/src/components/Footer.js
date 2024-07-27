@@ -3,7 +3,7 @@ import './css/Footer.css'
 import { Link } from "react-router-dom";
 function Footer() {
     return (
-        <footer class="footer bg-dark">
+        <footer class="footer bg-dark bottom-0">
 
             <div class="Footercontainer">
                 <div class="Footerrow">

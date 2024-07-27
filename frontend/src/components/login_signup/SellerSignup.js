@@ -40,7 +40,7 @@ const SignUp = (props) => {
             localStorage.setItem('userType', "seller")
             addAlert({
                 type: 'success',
-                msg: 'Registered Successfully'
+                msg: 'User registered successfully'
             })
 
             navigate("/")

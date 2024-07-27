@@ -2,11 +2,14 @@
 .update-container{
     width: 50%;
     margin: auto;
-    margin-top: 25px;
     padding: 16px;
     background-color: whitesmoke;
     border-radius: 20px;
     border: 2px solid rgb(224, 216, 216);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .update-top{

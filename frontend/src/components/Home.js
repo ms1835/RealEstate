@@ -61,22 +61,22 @@ function Home() {
                     Search
                 </Link >
             </form>
-            <div className='container '>
+            <div className='container mb-3 '>
                 <div className="d-flex justify-content-between responsive-cards gap-4">
                     <div className="card custom-card text-center" style={{ width: "18rem", borderRadius: "0.65rem", backgroundColor: 'whitesmoke' }}>
-                        <img src={buyImg} id="sloganCardImg" />
+                        <img src={buyImg} id="sloganCardImg" loading='lazy' />
                         <h6 className="card-title w-full" style={{ margin: '2px auto', color: 'rgb(97, 43, 15)' }}>Buy Property</h6>
                         <p className="card-text w-full" style={{ margin: '20px 2px', color: 'rgba(53, 51, 51, 1)' }}>Discover Your Dream Property with Ease - Just a Click Away!</p>
                     </div>
 
                     <div className="card custom-card text-center" style={{ width: "18rem", borderRadius: "0.65rem", backgroundColor: 'whitesmoke' }}>
-                        <img src={rent} id="sloganCardImg" />
+                        <img src={rent} id="sloganCardImg" loading='lazy' />
                         <h6 className="card-title w-full" style={{ margin: '2px auto', color: 'rgb(97, 43, 15)' }}>Rent Property</h6>
                         <p className="card-text w-full" style={{ margin: '20px 2px', color: 'rgba(53, 51, 51, 1)' }}>Find Your Perfect Rental Home - Convenient and Hassle-Free!</p>
                     </div>
 
                     <div className="card custom-card text-center" style={{ width: "18rem", borderRadius: "0.65rem", backgroundColor: 'whitesmoke' }}>
-                        <img src={buyImg} id="sloganCardImg" />
+                        <img src={buyImg} id="sloganCardImg" loading='lazy' />
                         <h6 className="card-title w-full" style={{ margin: '2px auto', color: 'rgb(97, 43, 15)' }}>Sell Property</h6>
                         <p className="card-text w-full" style={{ margin: '20px 2px', color: 'rgba(53, 51, 51, 1)' }}>Sell Your Property Quickly and Easily - Get the Best Value Today!</p>
                     </div>

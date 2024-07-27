@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AgentItem from './AgentItem';
-import Spinner from '../Spinner'
+import Loader from '../Loader'
 
 const host = process.env.REACT_APP_SERVER_HOST_URL;
 
@@ -36,7 +36,7 @@ function AgentResult() {
             setsender({ type: type, name: json.user.name, id: json.user._id })
         }
 
-        setloading(false);     // setting loading state
+        // setloading(false);     // setting loading state
 
     }
 
@@ -66,15 +66,17 @@ function AgentResult() {
 
     return (
         <div className='ApartementBackground'>
-            {loading && <Spinner />}
-            {!loading && agents.length == 0 ? <h2 className='text-white p-3'>Sorry, Currently we do not have any agent in {area}</h2> : <><h2 className='text-white p-3'>Agents in {area}</h2>
-                <div className="d-flex flex-column justify-content-center align-items-center">
-                    {agents.map((agent) => {
-                        let receiver = { id: agent._id, name: agent.name, type: "agent" }
-                        return <AgentItem key={agent._id} agent={agent} sender={sender} receiver={receiver} />
-                    })}
-                </div>
-            </>}
+            {
+            loading ? <Loader /> : 
+                agents.length == 0 ? <h2 className='text-white p-3'>Sorry, Currently we do not have any agent in {area}</h2> : <><h2 className='text-white p-3'>Agents in {area}</h2>
+                    <div className="d-flex flex-column justify-content-center align-items-center">
+                        {agents.map((agent) => {
+                            let receiver = { id: agent._id, name: agent.name, type: "agent" }
+                            return <AgentItem key={agent._id} agent={agent} sender={sender} receiver={receiver} />
+                        })}
+                    </div>
+                </>
+            }
         </div>
     )
 }

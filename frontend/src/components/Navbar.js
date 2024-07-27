@@ -42,7 +42,7 @@ function Navbar() {
         <nav className={`navbar fixed-position-navbar navbar-expand-lg navbar navbar-dark bg-dark`}>
             <div className="container-fluid">
                 <Link className="navbar-brand d-flex justify-content-center align-items-center" to="/" style={{color : 'white'} }>
-                    <img src={logo} alt="" width="40" height="40" className="d-inline-block align-text-top" style={{marginRight:8}} />
+                    <img src={logo} alt="" width="40" height="40" className="d-inline-block align-text-top" style={{marginRight:8}} loading='lazy'/>
                     HomeBazaar
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

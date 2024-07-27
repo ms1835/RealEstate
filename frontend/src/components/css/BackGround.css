@@ -1,4 +1,5 @@
 .backGround{
+    position: relative;
     background: #95acb3;
     min-height: 100vh;
     height: 100%;
@@ -7,6 +8,7 @@
 }
 
 .backGround2{
+    position: relative;
     background: radial-gradient(#76b2fe, #b69efe);
     min-height: 100vh;
     height: 100%;

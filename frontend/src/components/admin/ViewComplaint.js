@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ComplaintItem from './ComplaintItem';
 import "../css/BackGround.css"
-import Spinner from '../Spinner'
+import Loader from '../Loader'
 const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 function ViewComplaint() {
@@ -32,16 +32,18 @@ function ViewComplaint() {
     return (
         <div className='backGround2'>
         <div className='container-fluid '>
-            {lodding && <Spinner />}
-            {!lodding && complaints.length == 0 ? <h2 className='text-white p-3'>No complaints registered yet.</h2> : <><h2 className='text-white p-3'>Registered Complaints</h2>
-                <div className="d-flex flex-column justify-content-center align-items-center">
-                    {complaints.map((complaint ,index) => {
-                        return <ComplaintItem key={complaint._id} complaint={complaint} index={index} />
-                    })}
-                </div>
-            </>}
+            {
+            lodding ? <Loader /> :
+                complaints.length == 0 ? <h2 className='text-white p-3'>No complaints registered yet.</h2> : <><h2 className='text-white p-3'>Registered Complaints</h2>
+                    <div className="d-flex flex-column justify-content-center align-items-center">
+                        {complaints.map((complaint ,index) => {
+                            return <ComplaintItem key={complaint._id} complaint={complaint} index={index} />
+                        })}
+                    </div>
+                </>
+            }
         </div>
-        </div>
+       </div>
     )
 }
 

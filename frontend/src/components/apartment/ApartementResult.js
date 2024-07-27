@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useLocation } from "react-router-dom";
 import ApartmentItem from './ApartmentItem';
 import "../css/Apartement.css"
-import Spinner from '../Spinner'
+import Loader from '../Loader'
 const host = process.env.REACT_APP_SERVER_HOST_URL;
 
 function ApartementResult() {
@@ -33,9 +33,9 @@ function ApartementResult() {
 
     return (
         <div className='ApartementBackground'>
-            {isLoading && <Spinner />}
             {
-                !isLoading && apartements.length == 0 ? 
+                isLoading ? <Loader /> :
+                apartements.length == 0 ? 
                     <h2 className='text-white p-3'>Sorry, Currently no property is found in {area}</h2> : <><h2 className='text-white p-3'>Properties in {area}</h2>
                     <div className="d-flex flex-column justify-content-center align-items-center">
                         {

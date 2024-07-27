@@ -15,10 +15,13 @@ function Alert() {
 
 
     return (
-        <div style={{ height: '50px',marginBottom: 8 }}>
-            {alert && <div className={`alert alert-${alert.type} alert-dismissible fade show`} role="alert">
-                {alert.msg}
-            </div>}
+        <div className='position-absolute' style={{  zIndex: 3, width: 'max-content', float: 'right', right: 5}}>
+            {
+            alert && 
+                <div className={`alert alert-${alert.type} alert-dismissible fade show`} role="alert">
+                    {alert.msg}
+                </div>
+            }
         </div>
     )
 }

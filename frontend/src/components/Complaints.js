@@ -30,7 +30,7 @@ const Complaints = () => {
         if (json.success) {
             addAlert({
                 type: 'success',
-                msg: 'Complaint Register Successfully'
+                msg: 'Complaint Registered Successfully'
             })
             navigate("/");
         }

@@ -38,7 +38,7 @@ export default function UpdateProfile() {
         if (json.success) {
             addAlert({
                 type: 'success',
-                msg: 'Added apartment Successfully'
+                msg: 'Apartment added successfully'
             })
             navigate('/seller/dashboard')
         }

@@ -40,7 +40,7 @@ export default function UpdateProfile() {
         if (json.success) {
             addAlert({
                 type: 'success',
-                msg: 'Profile Updated Successfully'
+                msg: 'Profile updated successfully'
             })
             
             navigate('/admin/dashboard')

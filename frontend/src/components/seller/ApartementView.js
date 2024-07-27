@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
-import Spinner from '../Spinner'
+import Loader from '../Loader'
 import ApartmentItem from './ApartmentItem';
 import AlertContext from '../context/AlertContext'
 import Alert from '../Alert';
@@ -68,15 +68,17 @@ function ApartementView(props) {
     }, [])
     return (
             <div className='container-fluid'>
-                {isLoading && <Spinner />}
-                {!isLoading && apartements.length === 0 ? <h2 className='font-weight-bold'>There is currently no property listed.</h2> : <div><div className='dashboard-top text-white'>Your Listed Apartments </div>
-                    <Alert />
-                    <div className="d-flex flex-column justify-content-center align-items-center">
-                        {apartements.map((apartement, index) => {
-                            return <ApartmentItem key={apartement._id} apartement={apartement} index={index} deleteApartment={deleteApartment} />
-                        })}
+                {
+                    isLoading ? <Loader /> :
+                    apartements.length === 0 ? <h2 className='font-weight-bold'>There is currently no property listed.</h2> : <div><div className='dashboard-top text-white'>Your Listed Apartments </div>
+                        <Alert />
+                        <div className="d-flex flex-column justify-content-center align-items-center">
+                            {apartements.map((apartement, index) => {
+                                return <ApartmentItem key={apartement._id} apartement={apartement} index={index} deleteApartment={deleteApartment} />
+                            })}
+                        </div>
                     </div>
-                </div>}
+                }
             </div>
     )
 }

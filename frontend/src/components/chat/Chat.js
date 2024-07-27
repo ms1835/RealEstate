@@ -237,7 +237,7 @@ function Chat() {
             <h1 className='heading mb-3'>
                 Welcome to HomeBazaar Chat 
                 <span>
-                    <img className="LOGO" src={chatIcon} alt="" />
+                    <img className="LOGO" src={chatIcon} alt="" loading='lazy' />
                 </span>
             </h1>
             <div className="Container mb-3" >

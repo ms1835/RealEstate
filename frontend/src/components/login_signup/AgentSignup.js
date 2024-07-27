@@ -44,7 +44,7 @@ const AgentSignUp = () => {
             localStorage.setItem('userType', "agent")
             addAlert({
                 type: 'success',
-                msg: 'Registered Successfully'
+                msg: 'User registered successfully'
             })
             navigate("/")
         }

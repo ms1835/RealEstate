@@ -8,7 +8,7 @@ function ApartmentItem(props) {
 
     return (
         <div className="card w-50 mb-5">
-            <img src={images[no]} className="card-img-top " style={{ maxHeight: '300px' }} alt="..." />
+            <img src={images[no]} className="card-img-top " style={{ maxHeight: '300px' }} alt="..." loading='lazy' />
             <div className="card-body row">
                 <h6 className="col-md-4  my-2 "><b>Price - </b>&#8377; {apartement.price}</h6>
                 <h6 className="col-md-4  my-2 "><b>Area - </b>{apartement.area}</h6>

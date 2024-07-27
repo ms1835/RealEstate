@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div class="aboutuscontainer">
                 <div class="section-title">
                     <h1 className='heading1'>HomeBazaar 2.0 Team!__
-                        <img src={teamIcon} alt="Team Icon" className='teamIconImg' />
+                        <img src={teamIcon} alt="Team Icon" className='teamIconImg' loading='lazy' />
                     </h1>
                     <br />
                     <h2 className='heading2'> Our mission is to revolutionize the online real estate market by offering a seamless, secure, and 
@@ -22,7 +22,7 @@ const AboutUs = () => {
                     <div class="custom-column column">
                         <div class="team">
                             <div class="team-img">
-                                <img src={team1img} alt="Team Image" className='team-img' />
+                                <img src={team1img} alt="Team Image" className='team-img' loading='lazy' />
                             </div>
                             <div class="team-content">
                                 <h2 className='heading2'>MAYANK SINGH</h2>
@@ -40,7 +40,7 @@ const AboutUs = () => {
                     {/* <div class="custom-column column">
                         <div class="team">
                             <div class="team-img">
-                                <img src={team1img} alt="Team Image" className='team-img' />
+                                <img src={team1img} alt="Team Image" className='team-img' loading='lazy' />
                             </div>
                             <div class="team-content">
                                 <h2 className='heading2'>SHIVAM SAHU</h2>
@@ -59,7 +59,7 @@ const AboutUs = () => {
                     <div class="custom-column column">
                         <div class="team">
                             <div class="team-img">
-                                <img src={team2img} alt="Team Image" className='team-img' />
+                                <img src={team2img} alt="Team Image" className='team-img' loading='lazy' />
                             </div>
                             <div class="team-content">
                                 <h2 className='heading2'>MRITUNJAY KUMAR</h2>
@@ -77,7 +77,7 @@ const AboutUs = () => {
                     {/* <div class="custom-column column">
                         <div class="team">
                             <div class="team-img">
-                                <img src={team3img} alt="Team Image" className='team-img' />
+                                <img src={team3img} alt="Team Image" className='team-img' loading='lazy' />
                             </div>
                             <div class="team-content">
                                 <h2 className='heading2'>Om Prakash</h2>
