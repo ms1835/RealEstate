@@ -66,15 +66,15 @@ export default function UpdatePassword() {
                     <div className='update-top text-white mb-5 rounded' style={{background: "rgba(35, 66, 74)"}}>Update Your Password </div>
                     <div className="mb-3">
                         <label htmlFor="oldPassword" className="form-label">Enter old password</label>
-                        <input type="password" className="form-control" id="oldPassword" value={updatePassword.oldPassword} name='oldPassword' placeholder="password" onChange={onChange} required minLength={5} />
+                        <input type="password" className="form-control" id="oldPassword" value={updatePassword.oldPassword} name='oldPassword' placeholder="Password" onChange={onChange} required minLength={5} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="newPassword" className="form-label">Enter new password</label>
-                        <input type="password" className="form-control" id="newPassword" value={updatePassword.newPassword} name='newPassword' placeholder="new password" onChange={onChange} required minLength={5} />
+                        <input type="password" className="form-control" id="newPassword" value={updatePassword.newPassword} name='newPassword' placeholder="New Password" onChange={onChange} required minLength={5} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="cnewPassword" className="form-label">Confirm new password</label>
-                        <input type="password" className="form-control" id="cnewPassword" value={updatePassword.cnewPassword} name='cnewPassword' placeholder="confirm new password" onChange={onChange} required minLength={5} />
+                        <input type="password" className="form-control" id="cnewPassword" value={updatePassword.cnewPassword} name='cnewPassword' placeholder="Confirm New Password" onChange={onChange} required minLength={5} />
                     </div>
                     <div className='d-flex justify-content-center'>
                         <button type="submit" className="btn btn-success" >Submit</button>

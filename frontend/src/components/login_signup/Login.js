@@ -12,8 +12,8 @@ const Login = () => {
     const context = useContext(AlertContext);    // context API for custom alerts
     const { addAlert } = context;        // destructuring addAlert from AlertContext
 
-    const [credentials, setCredentials] = useState({ email: "", password: "" })  // useState hook for credentials
-    const [userType, setuserType] = useState("")       // useState hook for userType 
+    const [credentials, setCredentials] = useState({ email: `${process.env.REACT_APP_GUEST_USER}`, password: `${process.env.REACT_APP_GUEST_PWD}` })  // useState hook for credentials
+    const [userType, setuserType] = useState("buyer")       // useState hook for userType 
     let navigate = useNavigate();    // for navigation/page redirection
 
     //Function to handle form on submit
@@ -78,7 +78,7 @@ const Login = () => {
                     <select className="mb-3 form-select form-select-md rounded custom-select" aria-label="Default select example" onChange={onChangeType} required>
                         <option value="">Select Persona </option>
                         <option value="seller">Seller</option>
-                        <option value="buyer">Buyer</option>
+                        <option value="buyer" selected>Buyer</option>
                         <option value="admin">Admin</option>
                         <option value="agent">Agent</option>
                     </select>

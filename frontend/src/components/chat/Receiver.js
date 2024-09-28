@@ -66,8 +66,17 @@ export default function Receiver(props) {
         <>
             {
                 !loading ? 
-                    receiver.map((rec) => <ReceiverItem key={rec._id} receiver={rec} sender={sender} />)
-                : <></>
+                    (
+                        receiver.length > 0 
+                        ?  
+                        receiver.map((rec) => <ReceiverItem key={rec._id} receiver={rec} sender={sender} />) 
+                        : 
+                        <div className='d-flex flex-column align-items-center text-dark px-2'>
+                            <h3>No Chat to show currently</h3>
+                        </div>
+                    )
+                : 
+                <></>
             }
         </>
             
